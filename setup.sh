@@ -89,13 +89,10 @@ function install() {
 
       echo "Creating Kubernetes instance with v${AKS_VERSION}..."
       az aks create \
-        --enable-cluster-autoscaler \
         --enable-managed-identity \
         --location "${LOCATION}" \
         --kubernetes-version "${AKS_VERSION}" \
-        --max-count "50" \
-        --max-pods "110" \
-        --min-count "1" \
+        --node-count "1" \
         --name "${CLUSTER_NAME}" \
         --node-osdisk-size "100" \
         --node-vm-size "${K8S_NODE_VM_SIZE}" \
@@ -113,12 +110,9 @@ function install() {
 
       az aks nodepool add \
         --cluster-name "${CLUSTER_NAME}" \
-        --enable-cluster-autoscaler \
         --kubernetes-version "${AKS_VERSION}" \
         --labels gitpod.io/workload_workspace_services=true gitpod.io/workload_workspace_regular=true gitpod.io/workload_workspace_headless=true \
-        --max-count "50" \
-        --max-pods "110" \
-        --min-count "1" \
+        --node-count "1" \
         --name "${WORKSPACES_POOL}" \
         --node-osdisk-size "100" \
         --node-vm-size "${K8S_NODE_VM_SIZE}" \

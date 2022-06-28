@@ -1,0 +1,22 @@
+apiVersion: kots.io/v1beta1
+kind: IdentityConfig
+metadata:
+  creationTimestamp: null
+  name: identity
+spec:
+  clientID: gitpod
+  clientSecret:
+    valueEncrypted: 9o6CPiJfs4Zwmay58+2bdUZeEag4URVKu+Mvt1aintLue7w7dgiYmo56Vw==
+  dexConnectors:
+    valueEncrypted: qrqZJX9B8ZWqt7HZ0kT/IVCFk0Q=
+  enabled: false
+  ingressConfig:
+    enabled: false
+  storage:
+    postgresConfig:
+      database: gitpod-dex
+      host: kotsadm-postgres.gitpod
+      password:
+        valueEncrypted: 9o6CPiJe9pI3grWzsfCXdX8cRfg5RRpCh7AYAs6lkSalUkti/09gsrrtUQ==
+      user: gitpod-dex
+status: {}

@@ -1,0 +1,75 @@
+apiVersion: kots.io/v1beta1
+kind: ConfigValues
+metadata:
+  creationTimestamp: null
+  name: gitpod
+spec:
+  values:
+    advanced_mode_enabled:
+      default: "0"
+    cert_manager_enabled:
+      default: "1"
+    cert_manager_issuer:
+      default: ClusterIssuer
+    cert_manager_issuer_name:
+      value: gitpod-issuer
+    config_patch: {}
+    db_cloudsql_enabled:
+      default: "0"
+    db_cloudsql_instance: {}
+    db_encryption_keys:
+      value: '[{"name":"general","version":1,"primary":true,"material":"4uGh1q8y2DYryJwrVMHs0kWXJlqvHWWt/KJuNi04edI="}]'
+    db_gcp_credentials: {}
+    db_host: {}
+    db_incluster:
+      default: "1"
+    db_password:
+      value: sFh7gj5TlgnrCig/9KFSgw==
+    db_port:
+      value: "3306"
+    db_username:
+      value: gitpod
+    domain:
+      value: mygitpod.example.com
+    openVsxUrl: {}
+    reg_incluster:
+      default: "1"
+    reg_incluster_storage:
+      default: none
+    reg_incluster_storage_s3_accesskey: {}
+    reg_incluster_storage_s3_bucketname: {}
+    reg_incluster_storage_s3_endpoint:
+      value: s3.amazonaws.com
+    reg_incluster_storage_s3_region: {}
+    reg_incluster_storage_s3_secretkey:
+      value: pqCGKhxh8tnzwBCPRR7L8hFmvBzbRkr4
+    reg_password:
+      value: sFh7gj5TlgnrCig/9KFSgw==
+    reg_server: {}
+    reg_url: {}
+    reg_username: {}
+    ssh_gateway:
+      default: "0"
+    store_azure_access_key:
+      value: sFh7gj5TlgnrCig/9KFSgw==
+    store_azure_account_name: {}
+    store_gcp_credentials: {}
+    store_gcp_project: {}
+    store_provider:
+      default: incluster
+    store_region: {}
+    store_s3_access_key_id: {}
+    store_s3_bucket: {}
+    store_s3_endpoint:
+      value: s3.amazonaws.com
+    store_s3_secret_access_key:
+      value: sFh7gj5TlgnrCig/9KFSgw==
+    tls_ca_crt: {}
+    tls_crt: {}
+    tls_key: {}
+    tls_self_signed_enabled:
+      default: "0"
+    user_management_block_enabled:
+      default: "0"
+    user_management_block_passlist: {}
+status: {}

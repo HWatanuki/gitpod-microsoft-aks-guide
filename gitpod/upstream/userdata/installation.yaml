@@ -1,0 +1,18 @@
+apiVersion: kots.io/v1beta1
+kind: Installation
+metadata:
+  creationTimestamp: null
+  name: gitpod
+spec:
+  channelID: 259YYBILXTa30S1Soli9YcWcPTb
+  channelName: Stable
+  knownImages:
+  - image: eu.gcr.io/gitpod-core-dev/build/installer:release-2022.05.2.5
+  - image: eu.gcr.io/gitpod-core-dev/build/shiftfs-module-loader:commit-37164c872f55851dbd8126e1b5a8c062bc36fc1b
+  releaseNotes: "May 2022 hotfix release of Gitpod Installer\n\n- #10582 [kots]: move
+    the openssh installation to the container image \n- #10428 Bump MinI, MySQL and
+    RabbitMQ helm dependencies to latest version\n- #10577 [Installer]: configure
+    endpoint/region of registry S3 backing\n\nDocker image: `eu.gcr.io/gitpod-core-dev/build/installer:release-2022.05.2.5`"
+  updateCursor: "12"
+  versionLabel: 2022.5.2
+status: {}

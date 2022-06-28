@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patchesStrategicMerge:
+- gitpod-installation-status.yaml
+resources:
+- gitpod-certificate.yaml
+- gitpod-clusterrolebinding.yaml
+- gitpod-config-patch.yaml
+- gitpod-installation-status.yaml_BKP_22jun22
+- gitpod-installation.yaml
+- gitpod-installer-job.yaml
+- gitpod-license.yaml
+- gitpod-serviceaccount.yaml
+- gitpod-shiftfs-module-loader.yaml
