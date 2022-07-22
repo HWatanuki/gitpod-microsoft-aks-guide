@@ -1,0 +1,24 @@
+# Copyright (c) 2022 Gitpod GmbH. All rights reserved.
+# Licensed under the MIT License. See License-MIT.txt in the project root for license information.
+
+# This exists as debug information for the support bundle
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gitpod-installation
+  labels:
+    app: gitpod
+    component: gitpod-installer
+data:
+  channelName: 'Stable'
+  cursor: '12'
+  isAirgap: 'false'
+  releaseNotes: 'May 2022 hotfix release of Gitpod Installer
+
+- #10582 [kots]: move the openssh installation to the container image 
+- #10428 Bump MinI, MySQL and RabbitMQ helm dependencies to latest version
+- #10577 [Installer]: configure endpoint/region of registry S3 backing
+
+Docker image: `eu.gcr.io/gitpod-core-dev/build/installer:release-2022.05.2.5`'
+  sequence: '1'
+  version: '2022.5.2'
